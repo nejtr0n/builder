@@ -3,6 +3,7 @@ LABEL org.opencontainers.image.source="https://github.com/nejtr0n/builder"
 
 RUN apk update \
     && apk --no-cache --update add build-base bash \
+    && go install github.com/go-task/task/v3/cmd/task@v3.37.2 \
     && go install github.com/google/wire/cmd/wire@v0.6.0 \
     && go install github.com/volatiletech/sqlboiler/v4@v4.16.2 \
     && go install github.com/volatiletech/sqlboiler/v4/drivers/sqlboiler-psql@v4.16.2 \
