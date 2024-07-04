@@ -11,6 +11,7 @@ RUN apk update \
     && go install -tags 'postgres,mysql' github.com/golang-migrate/migrate/v4/cmd/migrate@v4.17.1 \
     && go install github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@v2.3.0 \
     && go install github.com/securego/gosec/v2/cmd/gosec@v2.20.0 \
+    && go install go.uber.org/mock/mockgen@v0.4.0 \
     && wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.59.1
 
 COPY --from=hadolint/hadolint:2.12.0 --chmod=777 /bin/hadolint /bin/hadolint
