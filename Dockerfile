@@ -1,4 +1,4 @@
-FROM golang:1.22.4-alpine3.20
+FROM golang:1.22.5-alpine3.20
 LABEL org.opencontainers.image.source="https://github.com/nejtr0n/builder"
 
 RUN apk update \
