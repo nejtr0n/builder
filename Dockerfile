@@ -19,4 +19,4 @@ RUN apk update \
 
 COPY --from=hadolint/hadolint:2.12.0 --chmod=777 /bin/hadolint /bin/hadolint
 
-CMD ["go", "version"]
+ENTRYPOINT ["go"]
