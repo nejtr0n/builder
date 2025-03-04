@@ -14,7 +14,8 @@ RUN apk update \
     && go install github.com/securego/gosec/v2/cmd/gosec@v2.22.1 \
     && go install github.com/vektra/mockery/v2@v2.52.4 \
     && go install github.com/dkorunic/betteralign/cmd/betteralign@v0.6.5 \
-    && go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.64.5
+    && go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.64.5 \
+    && go install github.com/air-verse/air@v1.61.7
 
 COPY --from=hadolint/hadolint:2.12.0 --chmod=777 /bin/hadolint /bin/hadolint
 
