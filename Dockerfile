@@ -18,5 +18,3 @@ RUN apk update \
     && go install github.com/air-verse/air@v1.61.7
 
 COPY --from=hadolint/hadolint:2.12.0 --chmod=777 /bin/hadolint /bin/hadolint
-
-ENTRYPOINT ["/go/bin/air"]
