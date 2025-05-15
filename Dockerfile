@@ -6,9 +6,9 @@ RUN apk update \
     && export CGO_ENABLED=0 \
     && go install github.com/go-task/task/v3/cmd/task@v3.41.0 \
     && go install github.com/google/wire/cmd/wire@v0.6.0 \
-    && go install github.com/volatiletech/sqlboiler/v4@v4.18.0 \
-    && go install github.com/volatiletech/sqlboiler/v4/drivers/sqlboiler-psql@v4.18.0 \
-    && go install github.com/volatiletech/sqlboiler/v4/drivers/sqlboiler-mysql@v4.18.0 \
+    && go install github.com/volatiletech/sqlboiler/v4@v4.19.0 \
+    && go install github.com/volatiletech/sqlboiler/v4/drivers/sqlboiler-psql@v4.19.0 \
+    && go install github.com/volatiletech/sqlboiler/v4/drivers/sqlboiler-mysql@v4.19.0 \
     && go install -tags 'postgres,mysql' github.com/golang-migrate/migrate/v4/cmd/migrate@v4.18.2 \
     && go install github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@v2.4.1 \
     && go install github.com/securego/gosec/v2/cmd/gosec@v2.22.1 \
